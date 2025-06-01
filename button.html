@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Button Click Counter</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 100px;
+      font-family: Arial, sans-serif;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #countDisplay {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="incrementCounter()">Click Me</button>
+  <div id="countDisplay">Button Clicked: 0 times</div>
+
+  <script>
+    let count = 0;
+
+    function incrementCounter() {
+      count++;
+      document.getElementById('countDisplay').innerText = `Button Clicked: ${count} ${count === 1 ? 'time' : 'times'}`;
+    }
+  </script>
+
+</body>
+</html>
