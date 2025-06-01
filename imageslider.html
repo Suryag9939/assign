@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Character Counter</title>
+</head>
+<body>
+
+  <textarea id="textInput" rows="4" cols="50" placeholder="Type something..."></textarea>
+  <div id="charCount">Characters: 0</div>
+
+  <script>
+    document.getElementById('textInput').addEventListener('input', function () {
+      const count = this.value.length;
+      document.getElementById('charCount').textContent = `Characters: ${count}`;
+    });
+  </script>
+
+</body>
+</html>
